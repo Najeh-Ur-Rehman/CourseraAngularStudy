@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html ng-app = 'MsgApp'>
+<head>
+    <meta charset="UTF-8">
+    <script src="angular (1).js"></script>
+    <!-- <script src="app.js"></script> -->
+    <!-- <script src="app1.js"></script> -->
+    <script src="messageApp.js"></script>
+    <style>body { font-size: 1.2em; }</style>
+    <title>Expression and Interpolation</title>
+</head>
+<body>
+    <h1>Expression and Interpolation</h1>
+    <div ng-controller = 'MsgController'>
+        {{name}} has a message for you: <br>
+        Original : {{sayMessage()}} <br>
+        Loves : {{sayLovesMessage()}}<br>
+        Truth : {{sayLovesMessage() | truth : 'Pic' : 'Photo Scene'}}<br>
+        Big Truth : {{sayLovesMessage() | truth : 'Pic' : 'Photo Scene' | uppercase}}<br>
+        
+        <div>
+            <button ng-click = "feedNajeh()">Feed Najeh</button>
+            <!-- Cost: {{ cookieCost | currency : "#blah" : 4 }} -->
+            <br>
+            <img ng-src="Najeh_{{stateOfBeing}}.jpg">
+        </div>
+    </div>
+
+
+    <!-- <h1>Dependency Injection in Js and in ngJs</h1>
+    <div ng-controller='DIController'>
+        <input type = "text" ng-model = "name" ng-blur = "upper();">
+    </div>
+          -->
+</body>
+</html>
+
+<!-- NameCalculator -->
+<!-- <html>
+<head>
+    <meta charset="UTF-8">
+    <script src="angular (1).js"></script>
+    <script src="app.js"></script>
+    <style> body { font-size: 1.3em; }</style>
+    <title>Name Calculator</title>
+</head>
+<body ng-app = "NameCalculator">
+    <h1>Name Calculator</h1>
+    <div ng-controller="NameCalculatorController">
+        <div>
+            Your Name:
+            <input type="text" ng-model = "name" ng-keyup = "displayNumeric();">
+        </div>
+        <div>Total numeric value of person's name is : {{totalValue}}</div>
+        {{name}}
+    </div>
+</body>
+</html> -->
+
+
+<!-- 
+    FirstApp of binding html to js page
+    <!DOCTYPE html>
+<html ng-app = "myFirstApp">
+<head>
+    <meta charset="UTF-8">
+    <script src="angular (1).js"></script>
+    <script src="app.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>My first AngularJs App</h1>
+    <div ng-controller="MyFirstController">
+        <input type="text" ng-model="name">
+        Inside text box name is : {{name}}
+    </div>
+    
+</body>
+</html> -->
